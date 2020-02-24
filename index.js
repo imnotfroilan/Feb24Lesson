@@ -72,3 +72,16 @@ Student.prototype.study = function (subject)
 console.log(`${student1.name} from ${student1.section} went to ${student1.school} in order to get killed by ${student2.name} from ${student2.section}`)
 
 student1.study("ICS2609");
+
+
+//6 CALL METHOD
+let stud1 = {name: "granny boi", course: "Intercourse", section: "2ITB"};
+
+let stud2 = {name: "demonyo", course: "Ghosting", section: "2ITF"};
+
+let displayInfo = function()
+{
+    document.write(`<h2>${this.name}, ${this.course} is enrolled in section ${this.section}</h2>`);
+}
+
+displayInfo.call(stud2);
