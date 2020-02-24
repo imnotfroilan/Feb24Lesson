@@ -75,9 +75,11 @@ student1.study("ICS2609");
 
 
 //6 CALL METHOD
-let stud1 = {name: "granny boi", course: "Intercourse", section: "2ITB"};
+let stud1 = {name: "granny boi"};
 
 let stud2 = {name: "demonyo", course: "Ghosting", section: "2ITF"};
+
+info = ["2ITB","IT"];
 
 let displayInfo = function()
 {
@@ -85,3 +87,18 @@ let displayInfo = function()
 }
 
 displayInfo.call(stud2);
+displayInfo.apply(stud1, info);
+
+//7 BIND METHOD
+
+let tao1 = {fname: "Jeff", lname = "Dimagiba"};
+let tao2 = {fname: "Junmar", lname = "Tigasin"};
+
+let fullname = function ()
+{
+    return this.fname + " " + this.lname;
+
+}
+
+let x = fullname.bind(tao1);
+console.log(x());
