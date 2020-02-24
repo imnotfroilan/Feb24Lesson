@@ -31,3 +31,22 @@ function Person (name, gender, age)
 let mina = new Person("Mina Sharon Myoui", "female", "22");
 
 document.write(`${mina.name} is a ${mina.gender} and is ${mina.age} years old`);
+
+//4. oject creation using ES6 syntax
+class Persona
+{
+    constructor(name, gender, age)
+    {
+        this.name =name;
+        this.gender = gender;
+        this.age = age;
+    }
+
+    walk(distance)
+    {
+        console.log(`${this.name} is able to walk to ${distance} miles...`)
+    }
+}
+
+let jisas = new Persona ("Mina Myoui", "female", 22);
+jisas.walk(5);
