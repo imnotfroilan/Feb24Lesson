@@ -50,3 +50,25 @@ class Persona
 
 let jisas = new Persona ("Mina Myoui", "female", 22);
 jisas.walk(5);
+
+
+//5. prototypes
+function Student(name, section, course)
+{
+    this.name = name;
+    this.section = section;
+    this.course = course;
+}
+
+let student1 = new Student ("Froylen Lem", "2ITB", 20);
+let student2 = new Student ("Demonyo", "2ITF", 20);
+
+Student.prototype.school = "UST";
+Student.prototype.study = function (subject)
+{
+    console.log(`${student1.name} is studying ${subject}`)
+}
+
+console.log(`${student1.name} from ${student1.section} went to ${student1.school} in order to get killed by ${student2.name} from ${student2.section}`)
+
+student1.study("ICS2609");
