@@ -18,3 +18,16 @@ function createPerson(name, gender, age)
 
 let juan = createPerson("juan dela cruz", "male", "69");
 console.log(`${juan.name} is a ${juan.gender} and is ${juan.age} years old`)
+
+
+//3. using object creation using constructor function 
+function Person (name, gender, age)
+{
+    this.name = name;
+    this.gender = gender;
+    this.age = age;
+}
+
+let mina = new Person("Mina Sharon Myoui", "female", "22");
+
+document.write(`${mina.name} is a ${mina.gender} and is ${mina.age} years old`);
